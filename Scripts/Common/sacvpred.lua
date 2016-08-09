@@ -6,24 +6,24 @@ local UPDATE_PATH = "/SidaBoL/Scripts/master/Common/sacvpred.lua?rand="..math.ra
 local UPDATE_FILE_PATH = LIB_PATH.."sacvpred.lua"
 local UPDATE_URL = "https://"..UPDATE_HOST..UPDATE_PATH
 
-local function AutoupdaterMsg(msg) print("<font color=\"#6699ff\"><b>sac vpred:</b></font> <font color=\"#FFFFFF\">"..msg..".</font>") end
-if AUTO_UPDATE then
-    local ServerData = GetWebResult(UPDATE_HOST, "/SidaBoL/Scripts/master/Common/sacvpred.version")
-    if ServerData then
-        ServerVersion = type(tonumber(ServerData)) == "number" and tonumber(ServerData) or nil
-        if ServerVersion then
-            if tonumber(version) < ServerVersion then
-                    AutoupdaterMsg("New version available"..ServerVersion)
-                    AutoupdaterMsg("Updating, please don't press F9")
-                    DelayAction(function() DownloadFile(UPDATE_URL, UPDATE_FILE_PATH, function () AutoupdaterMsg("Successfully updated. ("..version.." => "..ServerVersion.."), press F9 twice to load the updated version.") end) end, 3)
-            else
-               -- AutoupdaterMsg("You have got the latest version ("..ServerVersion..")")
-            end
-        end
-    else
-        AutoupdaterMsg("Error downloading version info")
-    end
-end
+-- local function AutoupdaterMsg(msg) print("<font color=\"#6699ff\"><b>sac vpred:</b></font> <font color=\"#FFFFFF\">"..msg..".</font>") end
+-- if AUTO_UPDATE then
+--     local ServerData = GetWebResult(UPDATE_HOST, "/SidaBoL/Scripts/master/Common/sacvpred.version")
+--     if ServerData then
+--         ServerVersion = type(tonumber(ServerData)) == "number" and tonumber(ServerData) or nil
+--         if ServerVersion then
+--             if tonumber(version) < ServerVersion then
+--                     AutoupdaterMsg("New version available"..ServerVersion)
+--                     AutoupdaterMsg("Updating, please don't press F9")
+--                     DelayAction(function() DownloadFile(UPDATE_URL, UPDATE_FILE_PATH, function () AutoupdaterMsg("Successfully updated. ("..version.." => "..ServerVersion.."), press F9 twice to load the updated version.") end) end, 3)
+--             else
+--                -- AutoupdaterMsg("You have got the latest version ("..ServerVersion..")")
+--             end
+--         end
+--     else
+--         AutoupdaterMsg("Error downloading version info")
+--     end
+-- end
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
