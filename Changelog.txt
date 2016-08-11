@@ -1,4 +1,11 @@
 ==================================
+Update r0.59 - 11 August 2016
+==================================
+    [General]
+        CustomPermaShow
+            Added CustomPermaShow library to auto downloader.
+
+==================================
 Update r0.58 - 09 August 2016
 ==================================
     [General]
