@@ -1,4 +1,11 @@
 ==================================
+Update r0.6 - 13 August 2016
+==================================
+    [Bug Fixes]
+        Buffs
+            Fixed buff issue caused by encryption that caused issues such as Jhin/Graves reloading and Caitlyn not using extended trap range.
+
+==================================
 Update r0.59 - 11 August 2016
 ==================================
     [General]
