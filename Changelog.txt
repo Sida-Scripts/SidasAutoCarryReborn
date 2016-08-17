@@ -1,4 +1,12 @@
 ==================================
+Update r0.61 - 17 August 2016
+==================================
+    [Champions]
+        Darius
+            W - Crippling Strike
+                No longer pauses orbwalking after attacking with Crippling Strike.
+
+==================================
 Update r0.6 - 13 August 2016
 ==================================
     [Bug Fixes]
