@@ -1,4 +1,17 @@
 ==================================
+Update r0.62 - 27 August 2016
+==================================
+    [Items]
+        Titanic Hydra
+            Orbwalking now correctly resets attack after Titanic Hydra cast.
+
+    [Champions]
+        Trundle
+            Q - Chomp
+                Now correctly detected again as an attack reset.
+                No longer pauses orbwalking after attacking with Chomp.
+
+==================================
 Update r0.61 - 17 August 2016
 ==================================
     [Champions]
