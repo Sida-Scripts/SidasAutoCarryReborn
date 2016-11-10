@@ -1,4 +1,11 @@
 ==================================
+Update r0.65 - 10 November 2016
+==================================
+    [General]
+        Temporary workaround for 6.22
+            - Added temporary workaround for broken callback in 6.22. Orbwalking should work alright but farming will suck until BoL can figure out a solution.
+
+==================================
 Update r0.64 - 01 September 2016
 ==================================
     [General]
