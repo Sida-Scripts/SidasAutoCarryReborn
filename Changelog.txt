@@ -1,4 +1,15 @@
 ==================================
+Update r0.68 - 18 November 2016
+==================================
+    [General]
+        Jungle
+            Lane Clear will now attack krug mini and plants
+
+    [Bug Fixes]
+        Kite Speed
+            Fixed an issue where kiting could be slower than it should be
+
+==================================
 Update r0.66 - 10 November 2016
 ==================================
     [General]
