@@ -1,4 +1,11 @@
 ==================================
+Update r0.70 - 10 February 2017
+==================================
+    [Bug Fixes]
+        Kassadin
+            Fixed bug in W farm calculation
+
+==================================
 Update r0.69 - 19 December 2016
 ==================================
     [Bug Fixes]
