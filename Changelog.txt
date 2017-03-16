@@ -1,4 +1,11 @@
 ==================================
+Update r0.71 - 16 March 2017
+==================================
+    [Bug Fixes]
+        Zyra Seeds
+            Will no longer try to attack Zyra's seeds
+
+==================================
 Update r0.70 - 10 February 2017
 ==================================
     [Bug Fixes]
