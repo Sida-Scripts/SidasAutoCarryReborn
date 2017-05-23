@@ -1,16 +1,29 @@
 ==================================
+Update r0.72 - 23 May 2017
+==================================
+    [Bug Fixes]
+        Jungle
+            Will now correctly clear all smaller golumns in lane clear mode.
+
+        Last Hit
+            Small fix to last hit calculations.
+
+        Auto Attack Configuration
+            Will no longer incorrectly display a message asking the user to attack something to configure auto attacks. This is no longer used.
+
+==================================
 Update r0.71 - 16 March 2017
 ==================================
     [Bug Fixes]
         Zyra Seeds
-            Will no longer try to attack Zyra's seeds
+            Will no longer try to attack Zyra's seeds.
 
 ==================================
 Update r0.70 - 10 February 2017
 ==================================
     [Bug Fixes]
         Kassadin
-            Fixed bug in W farm calculation
+            Fixed bug in W farm calculation.
 
 ==================================
 Update r0.69 - 19 December 2016
@@ -23,7 +36,7 @@ Update r0.69 - 19 December 2016
     [Champions]
         Camille
             General
-                Added Camille data
+                Added Camille data.
 
             Q - Precision Protocol
                 Added skill.
