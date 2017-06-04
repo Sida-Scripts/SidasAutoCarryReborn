@@ -1,4 +1,16 @@
 ==================================
+Update r0.73 - 04 June 2017
+==================================
+    [Bug Fixes]
+        Buffs
+            Fixed an issue caused by recent change to buff callback. This issue will be the root of many issues such as incorrect spell damage farm calculations and graves not attacking.
+
+    [Champions]
+        Graves
+            Auto Attack
+                Graves will no longer try to attack before his second attack is actually ready
+
+==================================
 Update r0.72 - 23 May 2017
 ==================================
     [Bug Fixes]
