@@ -1,4 +1,11 @@
 ==================================
+Update r0.75 - 06 June 2017
+==================================
+    [Bug Fixes]
+        General
+            Remaining patch fixes now that BoL is up to date.
+
+==================================
 Update r0.74 - 04 June 2017
 ==================================
     [Bug Fixes]
