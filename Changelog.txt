@@ -1,4 +1,11 @@
 ==================================
+Update r0.76 - 13 July 2017
+==================================
+    [General]
+        Updated for 7.14
+            Fixed numerous issues caused by Riot changes in 7.14.
+
+==================================
 Update r0.75 - 06 June 2017
 ==================================
     [Bug Fixes]

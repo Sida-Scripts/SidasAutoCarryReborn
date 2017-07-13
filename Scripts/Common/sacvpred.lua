@@ -722,7 +722,7 @@ function sacvpred:GetPredictedHealth2(unit, t)
 end
 
 function sacvpred:CollisionProcessSpell(unit, spell)
-    if unit and unit.valid and spell.target and unit.type ~= myHero.type and spell.target.type == 'obj_AI_Minion' and unit.team == myHero.team and spell and spell.name and (spell.name:lower():find("attack") or (spell.name == "frostarrow")) and spell.windUpTime and spell.target then
+    if unit and unit.valid and spell.target and unit.type ~= myHero.type and spell.target.type == 'AIMinion' and unit.team == myHero.team and spell and spell.name and (spell.name:lower():find("attack") or (spell.name == "frostarrow")) and spell.windUpTime and spell.target then
         if GetDistanceSqr(unit) < 4000000 then
             local time = (spell.startTime or self:GetTime()) + spell.windUpTime + GetDistance(spell.target, unit) / self:GetProjectileSpeed(unit) - GetLatency()/2000
             local i = 1
@@ -1231,7 +1231,7 @@ function sacvpred:CalcDamageOfAttack(source, target, spell, additionalDamage)
     local damageMultiplier = spell.name:find("CritAttack") and 2 or 1
 
     -- minions give wrong values for armorPen and armorPenPercent
-    if source.type == "obj_AI_Minion" then
+    if source.type == "AIMinion" then
         armorPenPercent = 1
     elseif source.type == "obj_AI_Turret" then
         armorPenPercent = 0.7
@@ -1260,7 +1260,7 @@ function sacvpred:CalcDamageOfAttack(source, target, spell, additionalDamage)
     end
 
     -- minions deal less damage to enemy heros
-    if source.type == "obj_AI_Minion" and target.type == myHero.type and source.team ~= TEAM_NEUTRAL then
+    if source.type == "AIMinion" and target.type == myHero.type and source.team ~= TEAM_NEUTRAL then
         damageMultiplier = 0.60 * damageMultiplier
     end
 
@@ -1270,7 +1270,7 @@ function sacvpred:CalcDamageOfAttack(source, target, spell, additionalDamage)
     end
 
     -- minions deal less damage to turrets
-    if source.type == "obj_AI_Minion" and target.type == "obj_AI_Turret" then
+    if source.type == "AIMinion" and target.type == "obj_AI_Turret" then
         damageMultiplier = 0.475 * damageMultiplier
     end
 
