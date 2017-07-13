@@ -1,4 +1,4 @@
-local version = "2.97"
+local version = "2.98"
 local TESTVERSION = false
 local AUTO_UPDATE = true
 local UPDATE_HOST = "raw.github.com"
@@ -1233,12 +1233,12 @@ function sacvpred:CalcDamageOfAttack(source, target, spell, additionalDamage)
     -- minions give wrong values for armorPen and armorPenPercent
     if source.type == "AIMinion" then
         armorPenPercent = 1
-    elseif source.type == "obj_AI_Turret" then
+    elseif source.type == "AITurret" then
         armorPenPercent = 0.7
     end
 
     -- turrets ignore armor penetration and critical attacks
-    if target.type == "obj_AI_Turret" then
+    if target.type == "AITurret" then
         armorPenPercent = 1
         armorPen = 0
         damageMultiplier = 1
@@ -1255,7 +1255,7 @@ function sacvpred:CalcDamageOfAttack(source, target, spell, additionalDamage)
     end
 
     -- use ability power or ad based damage on turrets
-    if source.type == myHero.type and target.type == "obj_AI_Turret" then
+    if source.type == myHero.type and target.type == "AITurret" then
         totalDamage = math.max(source.totalDamage, source.damage + 0.4 * source.ap)
     end
 
@@ -1265,27 +1265,27 @@ function sacvpred:CalcDamageOfAttack(source, target, spell, additionalDamage)
     end
 
     -- heros deal less damage to turrets
-    if source.type == myHero.type and target.type == "obj_AI_Turret" then
+    if source.type == myHero.type and target.type == "AITurret" then
         damageMultiplier = 0.95 * damageMultiplier
     end
 
     -- minions deal less damage to turrets
-    if source.type == "AIMinion" and target.type == "obj_AI_Turret" then
+    if source.type == "AIMinion" and target.type == "AITurret" then
         damageMultiplier = 0.475 * damageMultiplier
     end
 
     -- siege minions and superminions take less damage from turrets
-    if source.type == "obj_AI_Turret" and (target.charName == "Red_Minion_MechCannon" or target.charName == "Blue_Minion_MechCannon") then
+    if source.type == "AITurret" and (target.charName == "Red_Minion_MechCannon" or target.charName == "Blue_Minion_MechCannon") then
         damageMultiplier = 0.8 * damageMultiplier
     end
 
     -- caster minions and basic minions take more damage from turrets
-    if source.type == "obj_AI_Turret" and (target.charName == "Red_Minion_Wizard" or target.charName == "Blue_Minion_Wizard" or target.charName == "Red_Minion_Basic" or target.charName == "Blue_Minion_Basic") then
+    if source.type == "AITurret" and (target.charName == "Red_Minion_Wizard" or target.charName == "Blue_Minion_Wizard" or target.charName == "Red_Minion_Basic" or target.charName == "Blue_Minion_Basic") then
         damageMultiplier = (1 / 0.875) * damageMultiplier
     end
 
     -- turrets deal more damage to all units by default
-    if source.type == "obj_AI_Turret" then
+    if source.type == "AITurret" then
         damageMultiplier = 1.05 * damageMultiplier
     end
 
